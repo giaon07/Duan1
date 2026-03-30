@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trường THPT Số 1 Nguyễn Huệ</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f0f0f0; }
+        
+        /* Header */
+        #header { background-color: #fff; padding: 20px; text-align: center; position: relative; }
+        #header h1 { color: #cc0000; margin: 0; font-size: 18px; }
+        #header h2 { color: #cc0000; margin: 5px 0; font-size: 24px; text-transform: uppercase; }
+
+        /* Navbar */
+        #navbar { background-color: #004a99; overflow: hidden; }
+        #navbar ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        #navbar li a { color: white; text-decoration: none; padding: 12px 15px; display: block; font-size: 13px; font-weight: bold; }
+        #navbar li:hover { background-color: #003366; }
+
+        /* Main Container: Dùng Flexbox để chia cột dễ nhất */
+        #main-container { 
+            display: flex; 
+            max-width: 1200px; 
+            margin: 20px auto; 
+            gap: 15px; /* Khoảng cách giữa các cột */
+            padding: 0 10px;
+        }
+
+        /* Cột trái (Sidebar Left) */
+        #sidebar-left { width: 20%; flex-shrink: 0; }
+        
+        /* Cột giữa (Main Content) */
+        #main-content { width: 55%; flex-grow: 1; background: #fff; border: 1px solid #ccc; height: fit-content; }
+        
+        /* Cột phải (Sidebar Right) - Đây là phần bạn cần sửa */
+        #sidebar-right { width: 25%; flex-shrink: 0; }
+
+        /* Style chung cho các Box */
+        .box { background: #1a1a1a; color: white; margin-bottom: 15px; border: 1px solid #333; }
+        .box-title { background: #004a99; padding: 10px; font-weight: bold; font-size: 14px; border-bottom: 1px solid #fff; }
+        .box-content ul { list-style: none; padding: 0; margin: 0; }
+        .box-content li { border-bottom: 1px solid #333; }
+        .box-content li a { color: #ccc; text-decoration: none; padding: 8px 10px; display: block; font-size: 12px; }
+        .box-content li a:hover { color: #fff; background: #333; }
+
+        /* Phần giới thiệu học sinh */
+        .intro-section { display: flex; padding: 20px; gap: 20px; }
+        .intro-section img { width: 150px; height: auto; border: 1px solid #ddd; padding: 3px; background: #fff; }
+        .intro-info { flex: 1; color: #333; }
+        .intro-info h3 { margin-top: 0; color: #004a99; border-bottom: 2px solid #004a99; display: inline-block; }
+
+        /* Footer */
+        #footer { background-color: #00a2e8; color: white; padding: 30px; text-align: center; margin-top: 20px; line-height: 1.6; }
+        #footer a { color: yellow; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>SỞ GIÁO DỤC VÀ ĐÀO TẠO TỈNH GIA LAI</h1>
+        <h2>TRƯỜNG THPT SỐ 1 NGUYỄN HUỆ</h2>
+    </div>
+
+    <div id="navbar">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Sơ đồ tổ chức</a></li>
+            <li><a href="#">Kế hoạch giáo dục</a></li>
+            <li><a href="#">Văn bản - Công văn</a></li>
+            <li><a href="#">Tin tức - Sự kiện</a></li>
+            <li><a href="#">Tài nguyên</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+    <div id="main-container">
+        <div id="sidebar-left">
+            <div class="box">
+                <div class="box-title">Giới thiệu</div>
+                <div class="box-content">
+                    <ul>
+                        <li><a href="#">Ban Giám hiệu</a></li>
+                        <li><a href="#">Chi bộ Đảng</a></li>
+                        <li><a href="#">Đoàn Thanh niên</a></li>
+                        <li><a href="#">Tổ Chuyên môn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-title">Tin tức sự kiện</div>
+                <div class="box-content">
+                    <ul>
+                        <li><a href="#">Thời khóa biểu</a></li>
+                        <li><a href="#">Thi - Kiểm tra</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div class="intro-section">
+                <img src="https://i.ibb.co/11SXwfH/giao.jpg" alt="Nguyễn Thị Mỹ Giao">
+                <div class="intro-info">
+                    <h3>Học sinh: Nguyễn Thị Mỹ Giao</h3>
+                    <p>Chào mừng bạn đến với trang thông tin cá nhân của tôi.</p>
+                    <p><b>Lớp:</b> [Thông tin lớp]</p>
+                    <p><b>Thành tích:</b> Học sinh tiêu biểu năm học 2025-2026.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="sidebar-right">
+            <div class="box">
+                <div class="box-title">Lịch công tác</div>
+                <div class="box-content">
+                    <ul>
+                        <li><a href="#"
